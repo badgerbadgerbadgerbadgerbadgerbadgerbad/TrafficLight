@@ -28,7 +28,7 @@ public class Main {
                 minute = Double.parseDouble(userInput.toString().replaceAll("[^0-9.-]", ""));
 
                 if (minute <= 0 || minute > Integer.MAX_VALUE) {
-                    throw new WrongDataInputException();
+                    throw new WrongDataInputException("Something bad happened, sorry. Check your input, it must be a positive number");
                 }
 
                 //сокращаем ввод излишне большого числа до [0 - 10]
@@ -44,7 +44,7 @@ public class Main {
                 System.out.println(trafficLight);
             }
             catch (WrongDataInputException | NumberFormatException e) {
-                System.out.println("Something bad happened, sorry. Check your input, it must be a positive number.");
+                e.printStackTrace();
             }
 
             //очищаем ввод и предлагаем повторить или выйти из программы
