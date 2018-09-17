@@ -42,8 +42,7 @@ public class Main {
                 //(0 - 2] - красный, (2 - 5] - желтый, (5 - 10] и 0 - зеленый
                 TrafficLight trafficLight = new TrafficLight(minute);
                 System.out.println(trafficLight);
-            }
-            catch (WrongDataInputException | NumberFormatException e) {
+            } catch (WrongDataInputException | NumberFormatException e) {
                 e.printStackTrace();
             }
 
