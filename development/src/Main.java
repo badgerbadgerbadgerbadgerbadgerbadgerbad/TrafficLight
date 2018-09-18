@@ -30,6 +30,9 @@ public class Main {
                 if (minute <= 0 || minute > Integer.MAX_VALUE) {
                     throw new WrongDataInputException("Something bad happened, sorry. Check your input, it must be a positive number");
                 }
+                if (userInput.toString().isEmpty()) {
+                    throw new NumberFormatException();
+                }
 
                 //сокращаем ввод излишне большого числа до [0 - 10]
                 //здесь minute может принимать значение 0, когда вводится число, кратное и больше 10 (20, 30...)
